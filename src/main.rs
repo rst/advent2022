@@ -4,6 +4,7 @@ use std::env;
 // This is gonna get awfully repetitious...
 pub mod day1;
 pub mod day2;
+pub mod day3;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -16,6 +17,7 @@ fn main() {
         // So is this, but it seems harder to avoid.
         "1" => day1::day1(&input),
         "2" => day2::day2(&input),
+        "3" => day3::day3(&input),
         _ => println!("no code for {day_num} yet")
     }
 }
