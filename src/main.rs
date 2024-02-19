@@ -7,6 +7,7 @@ pub mod day2;
 pub mod day3;
 pub mod day4;
 pub mod day5;
+pub mod day6;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -22,6 +23,7 @@ fn main() {
         "3" => day3::day3(&input),
         "4" => day4::day4(&input),
         "5" => day5::day5(&input),
+        "6" => day6::day6(&input),
         _ => println!("no code for {day_num} yet")
     }
 }
