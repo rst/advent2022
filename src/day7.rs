@@ -59,8 +59,8 @@ pub fn day7(input: &str) {
             // rolling up sums later, but it saves *me* time... could keep
             // a stack of references to size cells if it mattered much.)
             for dir in &dir_stack {
-                let cur_sz = if let Some(val)=dir_size.get(dir) {*val} else {0};
-                dir_size.insert((*dir).clone(), cur_sz + file_sz);
+                let cur_sz = dir_size.entry(dir.clone()).or_insert(0);
+                *cur_sz += file_sz;
             }
         }
         else {
